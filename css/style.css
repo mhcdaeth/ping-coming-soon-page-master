@@ -1,0 +1,288 @@
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 95% 5%;
+      grid-template-rows: 95% 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+body .main {
+  display: -ms-grid;
+  display: grid;
+  width: 90%;
+}
+
+body .main .logo {
+  height: 100px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .main .textEmail {
+  text-align: center;
+}
+
+body .main .textEmail .header {
+  color: var(--gray);
+  font-weight: 300;
+}
+
+body .main .textEmail .header b {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+body .main .textEmail .subscribe {
+  font-size: 15px;
+}
+
+body .main .textEmail input {
+  width: 80%;
+  height: 40px;
+  border-radius: 25px;
+  border: 1px solid var(--blue);
+  margin: 5px 0;
+}
+
+body .main .textEmail input::-webkit-input-placeholder {
+  color: var(--gray);
+}
+
+body .main .textEmail input:-ms-input-placeholder {
+  color: var(--gray);
+}
+
+body .main .textEmail input::-ms-input-placeholder {
+  color: var(--gray);
+}
+
+body .main .textEmail input::placeholder {
+  color: var(--gray);
+}
+
+body .main .textEmail input[type="email"] {
+  padding-left: 20px;
+}
+
+body .main .textEmail .error {
+  display: none;
+  margin: 5px 0;
+  font-size: 13px;
+  margin-top: 0;
+  color: var(--light-red);
+}
+
+body .main .textEmail .msg {
+  display: block;
+}
+
+body .main .textEmail .input-error {
+  border: 1px solid var(--light-red);
+}
+
+body .main .textEmail button {
+  width: 85%;
+  height: 50px;
+  border-radius: 25px;
+  border: unset;
+  background-color: var(--blue);
+  margin: 5px 0;
+  color: white;
+  -webkit-box-shadow: 5px 5px 10px var(--pale-blue);
+          box-shadow: 5px 5px 10px var(--pale-blue);
+}
+
+body .main .img {
+  overflow: hidden;
+  height: 400px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main .img img {
+  width: 100%;
+}
+
+body .main .footer {
+  text-align: center;
+  color: var(--gray);
+  font-size: 13px;
+  display: -ms-grid;
+  display: grid;
+  height: 90px;
+  -ms-grid-rows: 80% 20%;
+      grid-template-rows: 80% 20%;
+      grid-template-areas: "icons" "copy";
+  justify-items: center;
+}
+
+body .main .footer .icons {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icons;
+  overflow: hidden;
+  width: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33.33% 33.33% 33.33%;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+body .main .footer .icons .social {
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+}
+
+body .main .footer .icons .social img {
+  width: 15px;
+  color: var(--pale-blue);
+}
+
+body .main .footer .icons .copy p {
+  margin: 0;
+}
+
+body .main .footer .copy {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: copy;
+}
+
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+body .attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 95% 5%;
+        grid-template-rows: 95% 5%;
+        grid-template-areas: "main" "footer";
+    overflow: hidden;
+  }
+  body .main {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: main;
+    width: 50%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 15% 31% 44% 10%;
+        grid-template-rows: 15% 31% 44% 10%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  body .main .logo {
+    height: 100%;
+  }
+  body .main .textEmail {
+    position: relative;
+    height: 100%;
+  }
+  body .main .textEmail input, body .main .textEmail button {
+    display: inline-block;
+  }
+  body .main .textEmail input {
+    width: 50%;
+  }
+  body .main .textEmail .error {
+    position: absolute;
+    left: 12%;
+  }
+  body .main .textEmail button {
+    width: 30%;
+  }
+  body .main .textEmail button:hover {
+    background-color: var(--pale-blue);
+  }
+  body .main .img {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  body .main .img img {
+    width: 100%;
+    height: 100%;
+  }
+  body .main .footer {
+    height: 100%;
+  }
+  body .main .footer .icons {
+    width: 25%;
+  }
+  body .main .footer .icons .social {
+    width: 30px;
+    height: 30px;
+  }
+  body .main .footer .icons .social img {
+    width: 10px;
+  }
+  body .main .footer .icons .social:hover {
+    background-color: var(--blue);
+  }
+  body .main .footer .copy p {
+    margin: 0;
+  }
+  body .attribution {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+}
+/*# sourceMappingURL=style.css.map */

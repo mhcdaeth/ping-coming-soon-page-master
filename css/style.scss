@@ -1,0 +1,265 @@
+:root{
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 95% 5%;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Libre Franklin', sans-serif;
+
+    .main{
+        display: grid;
+        width: 90%;
+
+        .logo{
+            height: 100px;
+            display: grid;
+            align-items: end;
+            justify-content: center;
+        }
+
+        .textEmail{
+            text-align: center;
+
+            .header{
+                color: var(--gray);
+                font-weight: 300;
+
+                b{
+                    font-weight: 700;
+                    color: var(--very-dark-blue);
+                }
+            }
+
+            .subscribe{
+                font-size: 15px;
+            }
+
+            input{
+                width: 80%;
+                height: 40px;
+                border-radius: 25px;
+                border: 1px solid var(--blue);
+                margin: 5px 0;
+            }
+
+            input::placeholder{
+                color: var(--gray);
+            }
+
+            input[type = "email"]{
+                padding-left: 20px;
+            }
+
+            .error{
+                display: none;
+                margin: 5px 0;
+                font-size: 13px;
+                margin-top: 0;
+                color: var(--light-red);
+            }
+
+            .msg{
+                display: block;
+            }
+
+            .input-error{
+                border: 1px solid var(--light-red);
+            }
+
+
+
+            button{
+                width: 85%;
+                height: 50px;
+                border-radius: 25px;
+                border: unset;
+                background-color: var(--blue);
+                margin: 5px 0;
+                color: white;
+                box-shadow: 5px 5px 10px var(--pale-blue);
+                
+            }
+        }
+
+        .img{
+            overflow: hidden;
+            height: 400px;
+            display: grid;
+            align-items: center;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .footer{
+            text-align: center;
+            color: var(--gray);
+            font-size: 13px;
+            display: grid;
+            height: 90px;
+            grid-template-rows: 80% 20%;
+            grid-template-areas:
+            "icons"
+            "copy" 
+            ;
+            justify-items: center;
+
+            .icons{
+                grid-area: icons;
+                overflow: hidden;
+                width: 60%;
+                display: grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+                grid-template-rows: 100%;
+                align-items: center;
+                justify-items: center;
+                
+                .social{
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid var(--pale-blue);
+                    border-radius: 50%;
+                    img{
+                        width: 15px;
+                        color: var(--pale-blue);
+                    }
+                }
+
+                .copy{
+                     p{
+                         margin: 0;
+                     }
+                }
+                
+            }
+
+            .copy{
+                grid-area: copy;
+            }
+        }
+    }
+
+    .attribution{
+        font-size: 11px; 
+        text-align: center;
+        
+        a { 
+            color: hsl(228, 45%, 44%);
+         }
+    }
+}
+
+@media screen and (min-width: 376px){
+    
+    body{
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 95% 5%;
+        grid-template-areas: 
+        "main"
+        "footer"
+        ;
+        overflow: hidden;
+
+        .main{
+            grid-area: main;
+            width: 50%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 15% 31% 44% 10%;
+            grid-template-columns: 100%;
+
+            .logo{
+                height: 100%;
+            }
+
+            .textEmail{
+                position: relative;
+                height: 100%;
+
+                input, button{
+                    display: inline-block;
+                }
+    
+                input{
+                    width: 50%;
+                }
+
+                .error{
+                    position: absolute;
+                    left: 12%;
+                }
+    
+                button{
+                    width: 30%;
+                }
+
+                button:hover{
+                    background-color: var(--pale-blue);
+                }
+            }
+
+            .img{
+                overflow: hidden;
+                display: block;
+                width: 100%;
+                height: 100%;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .footer{
+                height: 100%;
+
+                .icons{
+                    width: 25%;
+
+                    .social{
+                        width: 30px;
+                        height: 30px;
+
+                        img{
+                            width: 10px;
+                        }
+                    }
+
+                    .social:hover{
+                        background-color: var(--blue);
+                    }
+                }
+
+                .copy{
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+
+        }
+
+        .attribution{
+            grid-area: footer;
+        }
+    }
+}
